@@ -19,7 +19,7 @@ Built as an extension for the **[Ratings Plugin by K3ntas](https://github.com/K3
 
 | Before (original big search bar) | After (modal with live dropdown) |
 |----------------------------------|----------------------------------|
-| [Before Search] <img width="1434" height="785" alt="Befor_Web_Search" src="https://github.com/user-attachments/assets/0b000763-ee88-4970-bebf-8398bd6a03fe" /> |[After Search]<img width="1430" height="779" alt="After_Web_Search" src="https://github.com/user-attachments/assets/5050ab5a-1c74-4b96-95aa-8fec5df4cf6a" />
+|<img width="1434" height="785" alt="Befor_Web_Search" src="https://github.com/user-attachments/assets/0b000763-ee88-4970-bebf-8398bd6a03fe" /> |<img width="1430" height="779" alt="After_Web_Search" src="https://github.com/user-attachments/assets/5050ab5a-1c74-4b96-95aa-8fec5df4cf6a" />
 
 ### Mobile
 
