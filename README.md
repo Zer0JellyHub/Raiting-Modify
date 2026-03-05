@@ -12,7 +12,7 @@ Built as an extension for the **[Ratings Plugin by K3ntas](https://github.com/K3
 
 | Before | After |
 |--------|-------|
-| [Before] <img width="1429" height="796" alt="Befor_Home_Web" src="https://github.com/user-attachments/assets/16609e2e-8e15-4283-b0c2-694ab314945d" /> |[After] <img width="1429" height="777" alt="After_Home_Web" src="https://github.com/user-attachments/assets/7b90f20c-87a7-43a6-869e-173c9cfdc705" />
+| <img width="1429" height="796" alt="Befor_Home_Web" src="https://github.com/user-attachments/assets/16609e2e-8e15-4283-b0c2-694ab314945d" /> <img width="1429" height="777" alt="After_Home_Web" src="https://github.com/user-attachments/assets/7b90f20c-87a7-43a6-869e-173c9cfdc705" />
  
 
 ### Search — Before / After
