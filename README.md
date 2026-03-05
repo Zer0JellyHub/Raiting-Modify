@@ -12,20 +12,23 @@ Built as an extension for the **[Ratings Plugin by K3ntas](https://github.com/K3
 
 | Before | After |
 |--------|-------|
-| ![Before] <img width="1440" height="900" alt="Befor_Web_Search" src="https://github.com/user-attachments/assets/da73c3ff-64dc-4ed5-83eb-918bfe9b9274" />| ![After] <img width="1440" height="900" alt="After_Home_Web" src="https://github.com/user-attachments/assets/e5814c05-ffbc-4d44-8626-ac8b47d4eb3f" />|
-
-### Mobile
-
-| Before | After |
-|--------|-------|
-|![Before Mobile] <img width="1290" height="2796" alt="Befor_smarthphone" src="https://github.com/user-attachments/assets/863e93a5-37fc-4f6e-9a59-f39fff09ee5d" />
- |![After Mobile] <img width="1290" height="2796" alt="After_home_Smartphone" src="https://github.com/user-attachments/assets/e46ae756-f226-49e4-acea-44fab8e9c041" />|
+| [Before] <img width="1440" height="900" alt="Befor_Web_Search" src="https://github.com/user-attachments/assets/da73c3ff-64dc-4ed5-83eb-918bfe9b9274" />| [After] <img width="1440" height="900" alt="After_Home_Web" src="https://github.com/user-attachments/assets/e5814c05-ffbc-4d44-8626-ac8b47d4eb3f" />|
 
 ### Search — Before / After
 
 | Before (original big search bar) | After (modal with live dropdown) |
 |----------------------------------|----------------------------------|
-| ![Before Search] <img width="1440" height="900" alt="Befor_Web_Search" src="https://github.com/user-attachments/assets/1fe7c21b-5626-4f04-89b0-6d689f63143b" /> | ![After Search](<img width="1440" height="900" alt="After_Web_Search" src="https://github.com/user-attachments/assets/a6dcb2aa-3888-4633-9f52-b324ffad7752" />|
+| [Before Search] <img width="1440" height="900" alt="Befor_Web_Search" src="https://github.com/user-attachments/assets/1fe7c21b-5626-4f04-89b0-6d689f63143b" /> |[After Search](<img width="1440" height="900" alt="After_Web_Search" src="https://github.com/user-attachments/assets/a6dcb2aa-3888-4633-9f52-b324ffad7752" />|
+
+### Mobile
+
+| Before | After |
+|--------|-------|
+|[Before Mobile] <img width="1290" height="2796" alt="Befor_smarthphone" src="https://github.com/user-attachments/assets/863e93a5-37fc-4f6e-9a59-f39fff09ee5d" />
+
+|[After Mobile] <img width="1290" height="2796" alt="After_home_Smartphone" src="https://github.com/user-attachments/assets/e46ae756-f226-49e4-acea-44fab8e9c041" />|
+
+
 
 ---
 
