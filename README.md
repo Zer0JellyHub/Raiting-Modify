@@ -66,8 +66,8 @@ https://raw.githubusercontent.com/K3ntas/jellyfin-plugin-ratings/main/manifest.j
 ## 🚀 Installation
 
 1. Log in as **Admin**
-2. **Dashboard** → **Settings** → **General**
-3. Scroll to **"Custom JavaScript"**
+2. **Dashboard** 
+3. Scroll to *JavaScript Injector"**
 4. Paste the contents of [`jellyfin-icon-injector.js`](./jellyfin-icon-injector.js)
 5. **Save** → reload with `F5` / `Cmd+R`
 
@@ -102,7 +102,8 @@ Tested with **Jellyfin 10.11** + **Ratings Plugin v1.0.273** + **JellyTweaks 3.1
 
 ## 🙏 Credits
 
-- **[K3ntas/jellyfin-plugin-ratings](https://github.com/K3ntas/jellyfin-plugin-ratings)**
+- **K3ntas/jellyfin-plugin-ratings](https://github.com/K3ntas/jellyfin-plugin-ratings)**
+- **(https://github.com/n00bcodr/Jellyfin-JavaScript-Injector)**
 - **[jellyfin/jellyfin-web](https://github.com/jellyfin/jellyfin-web)**
 
 ---
