@@ -12,19 +12,25 @@ Built as an extension for the **[Ratings Plugin by K3ntas](https://github.com/K3
 
 | Before | After |
 |--------|-------|
-| ![Before](images/Befor_Home_Web.png) | ![After](images/After_Home_Web.png) |
+| ![Before](<img width="1440" height="900" alt="Befor_Web_Search" src="https://github.com/user-attachments/assets/da73c3ff-64dc-4ed5-83eb-918bfe9b9274" />
+) | ![After](<img width="1440" height="900" alt="After_Home_Web" src="https://github.com/user-attachments/assets/c3c2d144-31f8-4222-8331-9c69c32f061d" />
+) |
 
 ### Mobile
 
 | Before | After |
 |--------|-------|
-| ![Before Mobile](images/Befor_smarthphone.PNG) | ![After Mobile](images/After_home_Smartphone.PNG) |
+| ![Before Mobile](<img width="1290" height="2796" alt="Befor_smarthphone" src="https://github.com/user-attachments/assets/863e93a5-37fc-4f6e-9a59-f39fff09ee5d" />
+ | ![After Mobile](<img width="1290" height="2796" alt="After_home_Smartphone" src="https://github.com/user-attachments/assets/e46ae756-f226-49e4-acea-44fab8e9c041" />
+) |
 
 ### Search — Before / After
 
 | Before (original big search bar) | After (modal with live dropdown) |
 |----------------------------------|----------------------------------|
-| ![Before Search](images/Befor_Web_Search.png) | ![After Search](images/After_Web_Search.png) |
+| ![Before Search](<img width="1440" height="900" alt="Befor_Web_Search" src="https://github.com/user-attachments/assets/1fe7c21b-5626-4f04-89b0-6d689f63143b" />
+) | ![After Search](<img width="1440" height="900" alt="After_Web_Search" src="https://github.com/user-attachments/assets/a6dcb2aa-3888-4633-9f52-b324ffad7752" />
+) |
 
 ---
 
@@ -110,7 +116,7 @@ const target = document.querySelector(".headerLeft") || ...
 | Jellyfin Web — Mobile Browser | ✅ |
 | Docker / Synology NAS | ✅ tested |
 | Reverse Proxy | ✅ |
-| Jellyfin iOS / Android App | ❌ no Custom JS support |
+| Jellyfin iOS / Android App | ✅ |
 
 Tested with **Jellyfin 10.11** + **Ratings Plugin v1.0.273** + **JellyTweaks 3.1** + **Jellyfin Enhanced 11.1**
 
