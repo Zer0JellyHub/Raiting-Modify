@@ -93,7 +93,7 @@ https://raw.githubusercontent.com/K3ntas/jellyfin-plugin-ratings/main/manifest.j
 |----------|--------|
 | Jellyfin Web — Desktop | ✅ |
 | Jellyfin Web — Mobile Browser | ✅ |
-| Docker / Synology NAS | ✅ tested |
+| Docker / Synology NAS | ✅  |
 | Reverse Proxy | ✅ |
 | Jellyfin iOS / Android App | ✅ |
 
