@@ -12,13 +12,14 @@ Built as an extension for the **[Ratings Plugin by K3ntas](https://github.com/K3
 
 | Before | After |
 |--------|-------|
-| [Before] <<img width="1440" height="900" alt="Befor_Home_Web" src="https://github.com/user-attachments/assets/97715e6a-379b-4cc0-8450-a3e787437510" />| [After] <img width="1440" height="900" alt="After_Home_Web" src="https://github.com/user-attachments/assets/e5814c05-ffbc-4d44-8626-ac8b47d4eb3f" />|
+| [Before] <img width="1429" height="796" alt="Befor_Home_Web" src="https://github.com/user-attachments/assets/16609e2e-8e15-4283-b0c2-694ab314945d" /> [After] <img width="1429" height="777" alt="After_Home_Web" src="https://github.com/user-attachments/assets/7b90f20c-87a7-43a6-869e-173c9cfdc705" />
+ 
 
 ### Search — Before / After
 
 | Before (original big search bar) | After (modal with live dropdown) |
 |----------------------------------|----------------------------------|
-| [Before Search] <img width="1440" height="900" alt="Befor_Web_Search" src="https://github.com/user-attachments/assets/1fe7c21b-5626-4f04-89b0-6d689f63143b" /> |[After Search](<img width="1440" height="900" alt="After_Web_Search" src="https://github.com/user-attachments/assets/a6dcb2aa-3888-4633-9f52-b324ffad7752" />|
+| [Before Search] <img width="1434" height="785" alt="Befor_Web_Search" src="https://github.com/user-attachments/assets/0b000763-ee88-4970-bebf-8398bd6a03fe" /> |[After Search]<img width="1430" height="779" alt="After_Web_Search" src="https://github.com/user-attachments/assets/5050ab5a-1c74-4b96-95aa-8fec5df4cf6a" />
 
 ### Mobile
 
