@@ -87,23 +87,6 @@ https://raw.githubusercontent.com/K3ntas/jellyfin-plugin-ratings/main/manifest.j
 
 ---
 
-## 🎨 Customization
-
-**Move buttons to the left side** — in `inject()`:
-```js
-const target = document.querySelector(".headerLeft") || ...
-```
-
-**Keep original buttons visible** — remove from CSS:
-```css
-#requestMediaBtn,
-#headerSearchField {
-  display: none !important;
-}
-```
-
----
-
 ## 📱 Compatibility
 
 | Platform | Status |
