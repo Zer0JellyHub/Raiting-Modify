@@ -23,11 +23,8 @@ Built as an extension for the **[Ratings Plugin by K3ntas](https://github.com/K3
 
 ### Mobile
 
-| Before | After |
-|--------|-------|
-|[Before Mobile] <img width="1290" height="2796" alt="Befor_smarthphone" src="https://github.com/user-attachments/assets/863e93a5-37fc-4f6e-9a59-f39fff09ee5d" />
+|<img width="910" height="1010" alt="Befor and After" src="https://github.com/user-attachments/assets/47690419-19f2-4b43-b060-655055638e4f" />|
 
-|[After Mobile] <img width="1290" height="2796" alt="After_home_Smartphone" src="https://github.com/user-attachments/assets/e46ae756-f226-49e4-acea-44fab8e9c041" />|
 
 
 
