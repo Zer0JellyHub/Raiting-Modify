@@ -94,7 +94,6 @@ https://raw.githubusercontent.com/K3ntas/jellyfin-plugin-ratings/main/manifest.j
 | Jellyfin Web — Desktop | ✅ |
 | Jellyfin Web — Mobile Browser | ✅ |
 | Docker / Synology NAS | ✅  |
-| Reverse Proxy | ✅ |
 | Jellyfin iOS  | ✅ |
 
 Tested with **Jellyfin 10.11** + **Ratings Plugin v1.0.273** + **JellyTweaks 3.1** + **Jellyfin Enhanced 11.1**
