@@ -1,31 +1,19 @@
-/**
- * Jellyfin Header Button Injector
- * - Lupe      → Modal mit Suchfeld + nativer Dropdown darunter
- * - Ticket+?  → Request-Modal
- */
 (function () {
   "use strict";
-
   const CONTAINER_ID = "jbi-container";
   const STYLE_ID     = "jbi-styles";
   const OVERLAY_ID   = "jbi-search-overlay";
-
   const CSS = `
-    /* ── Originale ausblenden ── */
     #requestMediaBtn,
     #headerSearchField {
       display: none !important;
     }
-
-    /* ── Container ── */
     #jbi-container {
       display: inline-flex;
       align-items: center;
       gap: 0;
       flex-shrink: 0;
     }
-
-    /* ── Runde Icon-Buttons ── */
     .jbi-btn {
       position: relative !important;
       display: inline-flex !important;
@@ -45,7 +33,6 @@
     }
     .jbi-btn:hover  { background: rgba(255,255,255,0.1) !important; }
     .jbi-btn:active { background: rgba(255,255,255,0.18) !important; }
-
     .jbi-btn::after {
       content: attr(data-tooltip);
       position: absolute;
@@ -65,7 +52,6 @@
       z-index: 9999;
     }
     .jbi-btn:hover::after { opacity: 1; }
-
     .jbi-btn svg {
       width: 22px; height: 22px;
       fill: none;
@@ -77,15 +63,10 @@
       transition: stroke 0.15s ease;
     }
     .jbi-btn:hover svg { stroke: #fff; }
-
     @media (max-width: 925px) {
       .jbi-btn { width: 36px; height: 36px; }
       .jbi-btn svg { width: 19px; height: 19px; }
     }
-
-    /* ══════════════════════════════════════════
-       SUCHMODAL
-    ══════════════════════════════════════════ */
     #jbi-search-overlay {
       display: none;
       position: fixed !important;
@@ -99,7 +80,6 @@
       box-sizing: border-box;
     }
     #jbi-search-overlay.show { display: flex; }
-
     #jbi-search-modal {
       background: #1c1c1c;
       border-radius: 8px;
@@ -109,7 +89,6 @@
       position: relative;
       box-shadow: 0 8px 40px rgba(0,0,0,0.7);
     }
-
     #jbi-search-title {
       font-size: 24px;
       font-weight: 600;
@@ -117,7 +96,6 @@
       margin: 0 0 20px 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-
     #jbi-search-close {
       position: absolute;
       top: 12px; right: 14px;
@@ -135,12 +113,9 @@
       color: #fff;
       background: rgba(255,255,255,0.1);
     }
-
-    /* Suchfeld-Wrapper — relativ damit Dropdown darunter kommt */
     #jbi-input-wrap {
       position: relative;
     }
-
     #jbi-input-row {
       display: flex;
       align-items: center;
@@ -154,7 +129,6 @@
     #jbi-input-row:focus-within {
       border-color: rgba(255,255,255,0.35);
     }
-
     #jbi-input-row svg {
       width: 18px; height: 18px;
       flex-shrink: 0;
@@ -163,7 +137,6 @@
       stroke-linecap: round;
       fill: none;
     }
-
     #jbi-search-input {
       flex: 1;
       background: none;
@@ -175,14 +148,10 @@
       outline: none;
     }
     #jbi-search-input::placeholder { color: rgba(255,255,255,0.3); }
-
-    /* Nativer Jellyfin Dropdown — in unser Modal eingebettet */
     #jbi-dropdown-wrap {
       position: relative;
       width: 100%;
     }
-
-    /* Den nativen #searchDropdown umpflanzen */
     #jbi-dropdown-wrap #searchDropdown {
       position: relative !important;
       top: auto !important;
@@ -198,28 +167,22 @@
       z-index: 1 !important;
     }
   `;
-
   const SEARCH_SVG = `<svg viewBox="0 0 24 24">
     <circle cx="10.5" cy="10.5" r="6.5"/>
     <line x1="15.5" y1="15.5" x2="21" y2="21"/>
   </svg>`;
-
   const REQUEST_SVG = `<svg viewBox="0 0 24 24">
-    <!-- Play-Dreieck -->
     <path d="M6 4.5 L6 19.5 L19.5 12 Z" stroke-linejoin="round"/>
-    <!-- Plus-Badge oben rechts -->
     <circle cx="19" cy="5" r="4.5" fill="#1c1c1c" stroke="rgba(255,255,255,0.87)" stroke-width="1.4"/>
     <line x1="19" y1="2.5" x2="19" y2="7.5" stroke-width="1.6"/>
     <line x1="16.5" y1="5" x2="21.5" y2="5" stroke-width="1.6"/>
   </svg>`;
 
-  /* ── Suchmodal ── */
   let overlayEl = null;
   let dropdownWrap = null;
 
   function buildOverlay() {
     if (document.getElementById(OVERLAY_ID)) return;
-
     overlayEl = document.createElement("div");
     overlayEl.id = OVERLAY_ID;
     overlayEl.innerHTML = `
@@ -241,20 +204,14 @@
       </div>
     `;
     document.body.appendChild(overlayEl);
-
     dropdownWrap = document.getElementById("jbi-dropdown-wrap");
-
     const input    = document.getElementById("jbi-search-input");
     const closeBtn = document.getElementById("jbi-search-close");
-
-    /* Beim Tippen: nativen headerSearchInput synchronisieren → Dropdown erscheint */
     input.addEventListener("input", () => {
       const q = input.value;
       const nativeInput = document.getElementById("headerSearchInput");
       const nativeField = document.getElementById("headerSearchField");
-
       if (nativeInput) {
-        // Suchfeld kurz einblenden damit Dropdown positioniert werden kann
         if (nativeField) {
           nativeField.style.cssText =
             "display:block!important;opacity:0!important;position:absolute!important;left:-9999px!important;";
@@ -262,13 +219,9 @@
         nativeInput.value = q;
         nativeInput.dispatchEvent(new Event("input",  { bubbles: true }));
         nativeInput.dispatchEvent(new Event("change", { bubbles: true }));
-
-        // Dropdown nach kurzer Pause in unseren Wrapper verschieben
         setTimeout(moveDropdown, 80);
       }
     });
-
-    /* Enter → erste Ergebnis-URL öffnen oder Suchseite */
     input.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         const q = input.value.trim();
@@ -278,7 +231,6 @@
       }
       if (e.key === "Escape") closeOverlay();
     });
-
     closeBtn.addEventListener("click", closeOverlay);
     overlayEl.addEventListener("click", (e) => {
       if (e.target === overlayEl) closeOverlay();
@@ -288,21 +240,19 @@
   function moveDropdown() {
     const dd = document.getElementById("searchDropdown");
     if (!dd || !dropdownWrap) return;
-    if (dropdownWrap.contains(dd)) return; // schon drin
+    if (dropdownWrap.contains(dd)) return;
     dropdownWrap.appendChild(dd);
-    dd.style.cssText = ""; // eigene Stile entfernen → CSS übernimmt
+    dd.style.cssText = "";
     dd.classList.add("visible");
   }
 
   function restoreDropdown() {
-    /* Dropdown zurück ins body-Level bringen wenn Modal geschlossen */
     const dd = document.getElementById("searchDropdown");
     if (dd && dropdownWrap && dropdownWrap.contains(dd)) {
       document.body.appendChild(dd);
       dd.classList.remove("visible");
       dd.style.display = "none";
     }
-    /* Natives Suchfeld wieder verstecken */
     const nativeField = document.getElementById("headerSearchField");
     if (nativeField) nativeField.style.cssText = "";
   }
@@ -323,7 +273,6 @@
     restoreDropdown();
     const input = document.getElementById("jbi-search-input");
     if (input) input.value = "";
-    // Nativen Input leeren
     const nativeInput = document.getElementById("headerSearchInput");
     if (nativeInput) {
       nativeInput.value = "";
@@ -331,7 +280,6 @@
     }
   }
 
-  /* ── Request ── */
   function doRequest() {
     const origBtn = document.getElementById("requestMediaBtn");
     if (origBtn) { origBtn.click(); return; }
@@ -344,7 +292,6 @@
     }
   }
 
-  /* ── Button ── */
   function makeBtn(id, svg, tooltip, onClick) {
     const btn = document.createElement("button");
     btn.type = "button"; btn.id = id; btn.className = "jbi-btn";
@@ -354,7 +301,6 @@
     return btn;
   }
 
-  /* ── Inject ── */
   function inject() {
     if (document.getElementById(CONTAINER_ID)) return;
     const target =
@@ -362,13 +308,11 @@
       document.querySelector(".flex.align-items-center.flex-grow.headerTop") ||
       document.querySelector(".headerTop");
     if (!target) return;
-
     const container = document.createElement("div");
     container.id = CONTAINER_ID;
     container.appendChild(makeBtn("jbi-search-btn",  SEARCH_SVG,  "Suche",           openOverlay));
     container.appendChild(makeBtn("jbi-request-btn", REQUEST_SVG, "Medien anfordern", doRequest));
     target.insertBefore(container, target.firstChild);
-    console.log("[JBI] Buttons eingefügt.");
   }
 
   function init() {
@@ -381,12 +325,10 @@
   }
 
   setTimeout(init, document.readyState === "loading" ? 1500 : 900);
-
   const obs = new MutationObserver(() => {
     if (!document.getElementById(CONTAINER_ID)) inject();
   });
   const startObs = () => obs.observe(document.body, { childList: true, subtree: false });
   if (document.body) startObs();
   else document.addEventListener("DOMContentLoaded", startObs);
-
 })();
